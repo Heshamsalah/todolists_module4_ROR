@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
 
     if username && username.authenticate(password)
       session[:user_id] = username.id
-      redirect_to root_path, notice: "login successful"
+      redirect_to root_path, notice: "Logged in successfully"
     else
       redirect_to login_path, alert: "username/password is not valid!"
     end
